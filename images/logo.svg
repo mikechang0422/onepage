@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="160" height="90" viewBox="0 0 160 90">
+  <defs>
+    <style>
+      .cls-1 {
+        font-size: 66.667px;
+        filter: url(#filter);
+        fill: #4f4844;
+        font-family: DFKai-SB;
+      }
+    </style>
+    <filter id="filter" x="8" y="13" width="144" height="64" filterUnits="userSpaceOnUse">
+      <feGaussianBlur result="blur" stdDeviation="2.333" in="SourceAlpha"/>
+      <feComposite result="composite"/>
+      <feComposite result="composite-2"/>
+      <feComposite result="composite-3"/>
+      <feFlood result="flood" flood-color="#fff" flood-opacity="0.35"/>
+      <feComposite result="composite-4" operator="in" in2="composite-3"/>
+      <feBlend result="blend" mode="linearDodge" in2="SourceGraphic"/>
+      <feBlend result="blend-2" in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <text id="LOGO" class="cls-1" x="13" y="67">LOGO</text>
+</svg>

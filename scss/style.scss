@@ -1,0 +1,419 @@
+@import url('https://use.fontawesome.com/releases/v5.15.3/css/all.css');
+
+@mixin pad {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin link-style {
+  &:hover,
+  &active,
+  &focus {
+    @content;
+  }
+}
+
+%main-section-style {
+  padding: 1.5rem;
+
+  .title {
+    padding: 1rem 0;
+    font-weight: 700;
+    text-align: center;
+
+    img {
+      width: 50%;
+      height: 50%;
+      border-radius: 50%;
+    }
+  }
+
+  .txt {
+    border-top: 1px solid #000;
+    padding-top: 1rem;
+  }
+}
+$color-primary: #1d1d1f;
+$color-secondary: #f5f5f5;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 20px;
+  font-weight: 400;
+  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  line-height: 1.8;
+  color: $color-primary;
+
+  @include pad {
+    font-size: 16px;
+  }
+}
+
+a {
+  &:link,
+  &:visited,
+  &:active {
+    text-decoration: none;
+  }
+}
+
+img {
+  width: 100%;
+}
+
+.header {
+  position: fixed;
+  color: $color-secondary;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/images/header.jpg') center / cover no-repeat;
+
+  @include pad {
+    position: relative;
+    height: 200px;
+  }
+
+  .header-top {
+    top: 0;
+    display: flex;
+    padding-bottom: 1rem;
+    width: 100%;
+    flex-wrap: wrap;
+    flex-direction: row;
+
+    @include pad {
+      padding-bottom: 0;
+      width: auto;
+    }
+
+    .logo {
+      width: 100%;
+
+      @include pad {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+      }
+
+      a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: $color-secondary;
+        flex-wrap: wrap;
+        flex-direction: row;
+        text-transform: capitalize;
+
+        h1 {
+          font-size: 16px;
+        }
+
+        img {
+          width: 160px;
+        }
+      }
+    }
+
+    .bars {
+      padding-left: 1rem;
+      margin-right: auto;
+
+      label {
+        cursor: pointer;
+
+        @include pad {
+          display: none;
+        }
+      }
+    }
+
+    .carousel-bg {
+      display: none;
+
+      @include pad {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        z-index: 1;
+        display: block;
+
+        img {
+          position: absolute;
+          top: 0;
+          right: 0;
+          display: none;
+          width: 290px;
+          height: 180px;
+        }
+      }
+    }
+
+    .language-change {
+      padding-right: 1rem;
+      margin-left: auto;
+
+      @include pad {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        z-index: 2;
+      }
+
+      button {
+        margin: 0 3px;
+        text-align: right;
+        background-color: transparent;
+        border-style: solid;
+
+        a {
+          font-size: 1rem;
+          color: $color-secondary;
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+
+  .checkbar {
+    display: none;
+
+    &:checked {
+      ~ .nav {
+        left: 0;
+      }
+    }
+  }
+
+  .nav {
+    position: fixed;
+    left: -100%;
+    width: 100%;
+    height: calc(100vh - 134.8px);
+    background-color: rgba(0, 0, 0, 0.6);
+    transition: left 0.3s ease-in-out;
+
+    @include pad {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      z-index: 3;
+      display: flex;
+      justify-content: center;
+      height: auto;
+      background-color: rgba(0, 0, 0, 0.8);
+      box-shadow: 3px 0 5px hsla(240, 40%, 15%, 0.6);
+      flex-wrap: wrap;
+      flex-direction: column;
+
+      @include pad {
+        flex-direction: row;
+      }
+    }
+
+    > .nav-item {
+      @include pad {
+        &:last-child {
+          background-color: #dc3545;
+        }
+      }
+    }
+
+    .nav-item {
+      position: relative;
+      transition: all 0.2s ease-in-out;
+
+      @include link-style {
+        background-color: #dc3545;
+      }
+
+      @include pad {
+        &:hover {
+          > ul {
+            display: block;
+          }
+        }
+      }
+
+      ul {
+        display: none;
+
+        @include pad {
+          position: absolute;
+          top: 100%;
+          left: 10px;
+          display: none;
+          width: 150px;
+          background-color: #dc3545;
+          box-shadow: 3px 3px 5px hsla(240, 40%, 15%, 0.6);
+        }
+
+        li {
+          position: relative;
+          color: $color-primary;
+          transition: 0.3s background-color ease-in-out;
+          transition: all 0.2s ease-in-out;
+
+          @include link-style {
+            > a {
+              color: $color-secondary;
+              background-color: $color-primary;
+            }
+          }
+
+          @include pad {
+            &:hover {
+              > ul {
+                display: block;
+              }
+            }
+          }
+
+          ul {
+            position: absolute;
+            top: 10px;
+            left: 100%;
+            display: none;
+            width: 160px;
+            box-shadow: 3px 3px 5px hsla(240, 40%, 15%, 0.6);
+
+            li {
+              a {
+                color: $color-primary;
+                background-color: $color-secondary;
+                text-transform: uppercase;
+
+                &:hover {
+                  color: $color-secondary;
+                  background-color: $color-primary;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      a {
+        display: block;
+        padding: 0.5rem;
+        color: $color-secondary;
+
+        @include pad {
+          padding: 0.5rem 1rem;
+        }
+      }
+    }
+  }
+}
+
+.main {
+  padding-top: 134.8px;
+
+  @include pad {
+    display: flex;
+    padding: 1rem;
+    background: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url('/images/main.jpg') center /cover no-repeat;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .office-about,
+  .office-service,
+  .office-news {
+    @extend %main-section-style;
+
+    @include pad {
+      padding: 0;
+      width: 33.33%;
+    }
+
+    .title {
+      img {
+        width: 150px;
+        height: 150px;
+      }
+    }
+  }
+
+  .office-about,
+  .office-news {
+    background-color: #eee;
+
+    @include pad {
+      background-color: transparent;
+    }
+  }
+
+  .office-service {
+    .txt {
+      ol {
+        display: flex;
+        align-items: center;
+        list-style: inherit;
+        flex-wrap: wrap;
+        flex-direction: column;
+      }
+    }
+  }
+
+  .office-news {
+    .item {
+      padding: 0.5rem;
+    }
+  }
+}
+
+.footer {
+  padding: 1rem;
+  color: $color-secondary;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/images/footer.jpg') center / cover no-repeat;
+
+  @include pad {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 4rem;
+    background: linear-gradient(90deg, #000 0 40%, transparent), center / cover no-repeat url('/images/footer.jpg');
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+
+  .contanct {
+    i {
+      margin-right: 1rem;
+    }
+  }
+
+  .slogan {
+    padding-top: 2rem;
+    font-size: 1.5rem;
+    text-align: center;
+
+    @include pad {
+      padding-top: 0;
+    }
+  }
+
+  .pagination {
+    display: none;
+    text-transform: capitalize;
+
+    @include pad {
+      display: block;
+      height: 100%;
+      font-size: 0;
+      text-align: right;
+
+      .logo {
+        display: inline-block;
+        width: 160px;
+      }
+
+      p {
+        font-size: 1rem;
+      }
+    }
+  }
+}
