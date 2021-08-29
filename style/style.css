@@ -54,8 +54,8 @@ img {
 .header {
   position: fixed;
   color: #f5f5f5;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.6))), url("/images/header.jpg") center/cover no-repeat;
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/images/header.jpg") center/cover no-repeat;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.6))), url("./images/header.jpg") center/cover no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("./images/header.jpg") center/cover no-repeat;
 }
 
 @media (min-width: 768px) {
@@ -351,8 +351,8 @@ img {
     display: -ms-flexbox;
     display: flex;
     padding: 1rem;
-    background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.6)), to(rgba(255, 255, 255, 0.6))), url("/images/main.jpg") center/cover no-repeat;
-    background: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url("/images/main.jpg") center/cover no-repeat;
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.6)), to(rgba(255, 255, 255, 0.6))), url("./images/main.jpg") center/cover no-repeat;
+    background: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url("./images/main.jpg") center/cover no-repeat;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -413,8 +413,8 @@ img {
 .footer {
   padding: 1rem;
   color: #f5f5f5;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.6))), url("/images/footer.jpg") center/cover no-repeat;
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/images/footer.jpg") center/cover no-repeat;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.6))), url("./images/footer.jpg") center/cover no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("./images/footer.jpg") center/cover no-repeat;
 }
 
 @media (min-width: 768px) {
@@ -426,8 +426,8 @@ img {
         -ms-flex-pack: justify;
             justify-content: space-between;
     padding-top: 4rem;
-    background: -webkit-gradient(linear, left top, right top, color-stop(0, #000), to(transparent)), center/cover no-repeat url("/images/footer.jpg");
-    background: linear-gradient(90deg, #000 0 40%, transparent), center/cover no-repeat url("/images/footer.jpg");
+    background: -webkit-gradient(linear, left top, right top, color-stop(0, #000), to(transparent)), center/cover no-repeat url("./images/footer.jpg");
+    background: linear-gradient(90deg, #000 0 40%, transparent), center/cover no-repeat url("./images/footer.jpg");
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     -webkit-box-orient: horizontal;
