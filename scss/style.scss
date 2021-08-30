@@ -70,7 +70,9 @@ img {
 .header {
   position: fixed;
   color: $color-secondary;
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('./images/header.jpg') center / cover no-repeat;
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url('../images/header.jpg') center / cover no-repeat;
 
   @include pad {
     position: relative;
@@ -315,7 +317,9 @@ img {
   @include pad {
     display: flex;
     padding: 1rem;
-    background: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url('./images/main.jpg') center /cover no-repeat;
+    background:
+      linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)),
+      url('../images/main.jpg') center /cover no-repeat;
     flex-direction: row;
     flex-wrap: wrap;
   }
@@ -369,13 +373,17 @@ img {
 .footer {
   padding: 1rem;
   color: $color-secondary;
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('./images/footer.jpg') center / cover no-repeat;
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url('../images/footer.jpg') center / cover no-repeat;
 
   @include pad {
     display: flex;
     justify-content: space-between;
     padding-top: 4rem;
-    background: linear-gradient(90deg, #000 0 40%, transparent), center / cover no-repeat url('./images/footer.jpg');
+    background:
+      linear-gradient(90deg, #000 0 40%, transparent),
+      url('../images/footer.jpg') center / cover no-repeat;
     flex-wrap: wrap;
     flex-direction: row;
   }
