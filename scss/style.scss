@@ -67,6 +67,13 @@ img {
   width: 100%;
 }
 
+.wrap {
+  @include pad {
+    margin: 0 auto;
+    max-width: 960px;
+  }
+}
+
 .header {
   position: fixed;
   color: $color-secondary;
@@ -207,7 +214,7 @@ img {
       justify-content: center;
       height: auto;
       background-color: rgba(0, 0, 0, 0.8);
-      box-shadow: 3px 0 5px hsla(240, 40%, 15%, 0.6);
+      box-shadow: 0 3px 5px hsla(240, 40%, 15%, 0.6);
       flex-wrap: wrap;
       flex-direction: column;
 
